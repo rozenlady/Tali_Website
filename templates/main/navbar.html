@@ -1,0 +1,31 @@
+{% load static %}
+{% url 'cv:cv-view' as path_to_cv_view %}
+{% url 'portfolio:portfolio-view' as path_to_portfolio_view %}
+{% url 'dbt:dbt-view' as path_to_dbt_view %}
+{% url 'tftsd:tftsd-view' as path_to_tftsd_view %}
+{% url 'caparu:caparu-view' as path_to_caparu_view %}
+{% url 'tali:home-view' as path_to_home_view %}
+<body>
+    
+
+<button id="btn"> <img src="{% static 'images/tali.png' %}" class="tali"> </button>
+<nav id="nav">
+    <ul>
+        <li><a href="{{path_to_cv_view}}">Tali Rozenman Ismael</a></li>
+        <li><a href="{{path_to_portfolio_view}}">Portfolio</a></li>
+        <li><a href="{{path_to_dbt_view}}">don't be trashy</a></li>
+        <li><a href="{{path_to_tftsd_view}}">Tales from the S.D</a></li>
+        <li><a href="{{path_to_caparu_view}}">Caparu</a></li>
+        <li><a href="{{path_to_home_view}}">Home</a></li>
+    </ul>
+</nav>
+
+
+<script type="text/javascript" src={% static 'main.js' %}></script>
+</body>
+
+
+
+
+
+

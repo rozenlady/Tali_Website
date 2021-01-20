@@ -1,0 +1,47 @@
+{% load static %}
+{% url 'cv:cv-view' as path_to_cv_view %}
+{% url 'portfolio:portfolio-view' as path_to_portfolio_view %}
+{% url 'dbt:dbt-view' as path_to_dbt_view %}
+{% url 'tftsd:tftsd-view' as path_to_tftsd_view %}
+{% url 'caparu:caparu-view' as path_to_caparu_view %}
+{% url 'tali:home-view' as path_to_home_view %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+        <title>Tali Rozenman Ismael</title>
+        <link rel="stylesheet" type="text/css" href={% static 'home.css' %}/>
+        <!-- semantic UI -->
+        <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+    </head>
+    <body>
+        <div>
+            <!-- <a href="#" id="btn" class="logo"><img src="tali.png" class="tali"></a> -->
+            <button id="btn"> <img src="{% static 'images/tali.png' %}" class="tali"> </button>
+        </div>
+        <div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="{{path_to_cv_view}}">Tali Rozenman Ismael</a></li>
+                    <li><a href="{{path_to_portfolio_view}}">Portfolio</a></li>
+                    <li><a href="{{path_to_dbt_view}}">don't be trashy</a></li>
+                    <li><a href="{{path_to_tftsd_view}}">Tales from the S.D</a></li>
+                    <li><a href="{{path_to_caparu_view}}">Caparu</a></li>
+                    <li><a href="{{path_to_home_view}}">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <script type="text/javascript" src={% static 'home.js' %}></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>  
+    </body>
+
+    <!-- ☰ -->
+
+   
+   
+
+</html>
+

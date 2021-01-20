@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Portfolio
+{% endblock title %}
+
+{% block content %}
+
+
+    <section class="center">
+            <div class="portfolio">
+              <img src="{% static 'images/portfolio/1.jpg' %}">
+              <img src="{% static 'images/portfolio/2.jpg' %}">
+              <img src="{% static 'images/portfolio/4.jpg' %}">
+              <img src="{% static 'images/portfolio/5.jpg' %}">
+              <img src="{% static 'images/portfolio/6.jpg' %}">
+              <img src="{% static 'images/portfolio/7.jpg' %}">
+              <img src="{% static 'images/portfolio/8.jpg' %}">
+              <img src="{% static 'images/portfolio/9.jpg' %}">
+              <img src="{% static 'images/portfolio/10.jpg' %}">
+              <img src="{% static 'images/portfolio/11.jpg' %}">
+              <img src="{% static 'images/portfolio/12.jpg' %}">
+              <img src="{% static 'images/portfolio/13.jpg' %}">
+              <img src="{% static 'images/portfolio/14.jpg' %}">
+              <img src="{% static 'images/portfolio/15.jpg' %}">
+              <img src="{% static 'images/portfolio/16.jpg' %}">
+              <img src="{% static 'images/portfolio/17.jpg' %}">
+
+
+            </div>
+    </section>
+
+
+
+  <script type="text/javascript">
+    const slideshowImages = document.querySelectorAll(".portfolio img");
+
+    const nextImageDelay = 1500;
+    let currentImageCounter = 0; // setting a variable to keep track of the current image (slide)
+
+    // slideshowImages[currentImageCounter].style.display = "block";
+    slideshowImages[currentImageCounter].style.opacity = 1;
+
+    setInterval(nextImage, nextImageDelay);
+
+    function nextImage() {
+    // slideshowImages[currentImageCounter].style.display = "none";
+    slideshowImages[currentImageCounter].style.opacity = 0;
+
+    currentImageCounter = (currentImageCounter+1) % slideshowImages.length;
+
+    // slideshowImages[currentImageCounter].style.display = "block";
+    slideshowImages[currentImageCounter].style.opacity = 1;
+    }
+  </script>
+
+
+
+
+
+{% endblock content %}
